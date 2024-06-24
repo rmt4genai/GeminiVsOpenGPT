@@ -4,9 +4,10 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.parse
 from functools import lru_cache
-
+import os 
+from dotenv import load_dotenv
 openai = OpenAI(
-    api_key="HDtCy0QDu4Xj9noGAZqoNWhOl0b4vNWJ",
+    api_key=os.getenv("OPENAI_API_KEY"),
     base_url="https://api.deepinfra.com/v1/openai",
 )
 
